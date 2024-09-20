@@ -1,0 +1,43 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "UpdateBlog";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Deneyimler</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Deneyim Ekleme Sayfası</div>
+					</div>
+					<div class="card-body">
+
+						<form method="post">
+							<input type="hidden" asp-for="Id" />
+							<label>Blog Başlığı</label>
+							<input type="text" asp-for="Title" class="form-control" />
+							<br />
+							<label>Blog Kategori</label>
+							<input type="text" asp-for="Category" class="form-control" />
+							<br />
+							<label>Blog Linki</label>
+							<input type="text" asp-for="BlogUrl" class="form-control" />
+							<br />
+							<label>Tarih Aralığı</label>
+							<input type="date" asp-for="Date" class="form-control" />
+							<br />
+							<label>Blog Detayı</label>
+							<textarea rows="8" class="form-control" asp-for="Detail"></textarea>
+							<br />
+							<button class="btn btn-warning">Blog Yazısını Güncelle</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
